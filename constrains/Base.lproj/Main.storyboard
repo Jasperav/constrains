@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +18,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZd-Tv-hk7">
+                                <rect key="frame" x="133" y="172" width="400" height="31"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test" translatesAutoresizingMaskIntoConstraints="NO" id="XFk-Rn-TCi">
+                                        <rect key="frame" x="2" y="5" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XFk-Rn-TCi" secondAttribute="height" id="HJT-LU-U38"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEn-aj-oLA">
+                                        <rect key="frame" x="28" y="5" width="367" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="DEn-aj-oLA" firstAttribute="top" secondItem="vZd-Tv-hk7" secondAttribute="top" constant="5" id="8CN-mR-CtU"/>
+                                    <constraint firstItem="XFk-Rn-TCi" firstAttribute="centerY" secondItem="vZd-Tv-hk7" secondAttribute="centerY" id="AV8-u3-e8J"/>
+                                    <constraint firstAttribute="bottom" secondItem="DEn-aj-oLA" secondAttribute="bottom" constant="5" id="INo-d7-k9V"/>
+                                    <constraint firstAttribute="trailing" secondItem="DEn-aj-oLA" secondAttribute="trailing" constant="5" id="K6v-mX-eRj"/>
+                                    <constraint firstItem="XFk-Rn-TCi" firstAttribute="leading" secondItem="vZd-Tv-hk7" secondAttribute="leading" constant="2" id="L9v-cQ-EIM"/>
+                                    <constraint firstItem="XFk-Rn-TCi" firstAttribute="height" secondItem="DEn-aj-oLA" secondAttribute="height" id="SkE-qs-pN6"/>
+                                    <constraint firstItem="XFk-Rn-TCi" firstAttribute="trailing" secondItem="DEn-aj-oLA" secondAttribute="leading" constant="-5" id="ULg-Ox-IXn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vZd-Tv-hk7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UOU-fy-OXa"/>
+                            <constraint firstItem="vZd-Tv-hk7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZvQ-zf-1WK"/>
+                            <constraint firstItem="vZd-Tv-hk7" firstAttribute="width" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="qwL-a9-fOa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -24,4 +60,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Test" width="646" height="220"/>
+    </resources>
 </document>
